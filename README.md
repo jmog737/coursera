@@ -1,2 +1,0 @@
-# courseratest
-coursera test repository
