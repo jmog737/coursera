@@ -1,152 +1,114 @@
-/* 
-    Created on : 02-ene-2017, 12:15:45
-    Author     : Juan Martin
-*/
-
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  font-family: serif, helvetica, arial;
 }
 
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #61122f;
-  font-family: 'Oxygen', sans-serif;
+  background-color: #8b5689;
 }
 
 /** HEADER **/
-#header-nav {
+#header-nav { /* nav tag  */
   background-color: #f6b319;
   border-radius: 0;
   border: 0;
-  position:relative;
+}
+#header-container {  /* div clase container dentro del nav */
   width: 100%;
+  background-color: #f6b319;
   padding: 0px;
   margin: 0px;
 }
-#header-container {
-  width: 100%;
-  background-color: #0033ff;
-  padding: 0px;
-  margin: 0px;
-}
-.navbar-header {
- background-color: #ff00ff;
+#header-navbar {
+ background-color: #b7ffb8;
  width: 100%;
- padding: 20px;
+ margin: 0px;
+ padding: 0px;
 }
 .navbar-brand {
-  /*padding-top: 55px;*/
-  /*position: relative;*/
-  background-color: #00ffff;
-  width: 100%;
+  padding: 10px;
+  padding-left: 40px;
 }
-
-.navbar-brand h1 { /* Restaurant name */
-  font-family: 'Lora', serif;
-  color: #557c3e;
-  font-size: 1.5em;
+.navbar-brand h1 {
+  color: #1b682c;
+  font-size: 2.0em;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 1px 1px 1px #222;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
   line-height: .75;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
-.navbar-brand a:hover, .navbar-brand a:focus {
+.navbar-header a:hover, .navbar-header a:focus {
   text-decoration: none;
 }
-
 #nav-list {
-  /*margin-top: 10px;*/
+  margin-top: 0px;
+  background-color: #E7E7E7;
 }
 #nav-list a {
-  color: #951C49;
-  text-align: center;
-  background-color: #557c3e;
-}
-#nav-list a:hover {
+  color: #cc0033;
   background: #E7E7E7;
+  font-weight: bold;
+  font-size: 1.7em;
+  line-height: 0.8;
 }
-
-.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #61122f;
-}
-.navbar-header button.navbar-toggle {
-  clear: both;
-  /*margin-top: -30px;*/
+#nav-list a:hover, #nav-list a:focus {
+  background: #6181d5;
 }
 /* END HEADER */
 
 /* HOME PAGE */
-
+#main-container {
+  width: 100%;
+}
+#menu-title {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+#main-row {
+  width: 90%;
+  height: 1000px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 20px 20px 30px 20px;
+  background-color: #355d35;
+}
+#contenido {
+  width: 100%;
+}
 /* END HOME PAGE */
 
 /************************ DEVICES ****************************/
 
-/********** Large devices only **********/
-@media (min-width: 1200px) {
-  
+/********** Medium and Large devices (md/lg) **********/
+@media (min-width: 992px) {
+  .navbar-brand h1 {
+  font-size: 2.4em;
+  margin-top: 0px;
+  }
 }
 
-/********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
-  
-  /* End Header */
-}
-
-/********** Small devices only **********/
+/********** Small devices only (sm) **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  
+  .navbar-brand h1 {
+    font-size: 2.2em;
+  }
+  #main-row {
+    width: 80%;
+  }
 }
 
-/********** Extra small devices only **********/
+/********** Extra small devices only (xs) **********/
 @media (max-width: 767px) {
-  /* Header */
-  #header-container {
-    margin-right: 0px;
-    padding-right: 0px;
-    width: 50%;
+  .navbar-nav {
+    margin-bottom: 0px;
   }
-  .navbar-header {
-    margin: 0px;
-    width: 100%;
-  }
-  .navbar-brand {
-    /*padding-top: 10px;*/
-    /*height: 80px;*/
-  }
-  .navbar-brand h1 { /* Restaurant name */
-    /*padding-top: 10px;*/
-    font-size: 5vw; /* 1vw = 1% of viewport width */
-  }
-
-  #collapsable-nav a { /* Collapsed nav menu text */
-    font-size: 1.5em;
-  }
-  /* End Header */
-}
-
-/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
-@media (max-width: 479px) {
-  /* Header */
-  .navbar-brand h1 { /* Restaurant name */
-    /*padding-top: 5px;*/
-    font-size: 6vw;
-  }
-  /* End Header */
-  
-  .col-xxs-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    float: left;
-    width: 100%;
+  #main-row {
+    width: 70%;
   }
 }
